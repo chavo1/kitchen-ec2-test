@@ -2,7 +2,7 @@
 # Prerequisite:
 
 Be sure you have [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). 
-In the example in ".kitchen.yml" file under driver section:
+In the example in "kitchen.yml" file under driver section:
 
 ```
 aws_ssh_key_id: id_rsa
