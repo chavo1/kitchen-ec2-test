@@ -41,6 +41,22 @@ kitchen list
 kitchen converge
 kitchen verify
 ```
+The result should be as follow:
+
+```
+ System Package nginx
+     ✔  should be installed
+  File /etc/nginx/sites-available/default
+     ✔  should exist
+  Port 80
+     ✔  should be listening
+  Nginx Environment
+     ✔  support_info should match /TLS/
+  Nginx Environment
+     ✔  version should eq "1.10.3"
+```
+-For more [nginx inspec audit](https://www.inspec.io/docs/reference/resources/nginx/)
+
 5. Destroy the EC2 instance:
 ```
 kitchen destroy
