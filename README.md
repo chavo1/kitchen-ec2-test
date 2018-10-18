@@ -1,13 +1,21 @@
+
 # Prerequisite:
 
+Be sure you have [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). 
+In the example in ".kitchen.yml" file under driver section:
+
+```
+aws_ssh_key_id: id_rsa
+```
+Is a key which is imported to or genarated in [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Under the transport section is a private part of this pair which is located on your machine:
+```
+ssh_key: "~/.ssh/id_rsa"
+```
 Be sure you have installed "rbenv", if not follow below:
 ```
 brew install rbenv
-
 rbenv install 2.3.1
-
 rbenv local 2.3.1
-
 rbenv versions //to check if version is 2.3.1
 ```
 add the following to your ~/.bash_profile:
@@ -25,9 +33,13 @@ source ~/.bash_profile
 This will create EC2 instance from AWS AMI  with "ubuntu-xenial-14.04" and "nginx".
 
 1.  Fork the copy of chavo1/kitchen-ec2-test
-2.  Clone it with following :
+2.  Download a ZIP with following link:
 ```
-git clone git@github.com:chavo1/kitchen-ec2-test.git
+https://github.com/chavo1/kitchen-ec2-test/archive/master.zip
+```
+ - Or open it with GitHub Desktop:
+```
+https://github.com/chavo1/kitchen-ec2-test.git
 ```
 3. Install and init kitchen-ec2 driver with following:
 ```
@@ -55,7 +67,8 @@ The result should be as follow:
   Nginx Environment
      ✔  version should eq "1.10.3"
 ```
--For more [nginx inspec audit](https://www.inspec.io/docs/reference/resources/nginx/)
+
+ - For more [nginx inspec audit](https://www.inspec.io/docs/reference/resources/nginx/)
 
 5. Destroy the EC2 instance:
 ```
