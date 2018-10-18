@@ -2,7 +2,7 @@
 driver:
   name: ec2
   aws_ssh_key_id: id_rsa
-  security_group_ids: ["sg-fcc1f1b1"]
+  security_group_ids: ["sg-0afa16b5b0d3ace0e"]
   region: us-east-1
   availability_zone: a
   instance_type: t2.micro
@@ -11,7 +11,7 @@ driver:
 platforms:
   - name: ubuntu-14.04
     driver:
-      image_id: ami-0d0670003ee05041b
+      image_id: ami-07647a0c080280f47
 transport:
     ssh_key: "~/.ssh/id_rsa"
     username: ubuntu
