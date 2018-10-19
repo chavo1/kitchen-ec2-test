@@ -1,5 +1,8 @@
 
-# Prerequisite:
+# This is kitchen test that will test an AMI under Your AWS account.
+If you have AMI with [nginx](https://www.nginx.com/) you can continue with prerequisite if no [here](https://github.com/chavo1/ami-nginx) in other repo is an explanation how to build you own.
+
+##Prerequisite:
 
 Be sure you have [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). 
 In the example in "kitchen.yml" file under driver section:
