@@ -1,5 +1,9 @@
 
 # This is kitchen test that will test an AMI with [nginx](https://www.nginx.com/) under Your AWS account.
+Please be aware the value of AMI image is hardcoded in "kitchen.yml" file and you shoud change it with you own.
+```
+image_id: ami-07647a0c080280f47
+```
 If you have AMI with [nginx](https://www.nginx.com/) you can continue with prerequisite if no [here](https://github.com/chavo1/ami-nginx) in other repo is an explanation how to build you own.
 
 ##Prerequisite:
