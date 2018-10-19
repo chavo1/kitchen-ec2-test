@@ -88,8 +88,6 @@ The result should be as follow:
      ✔  should be listening
   Nginx Environment
      ✔  support_info should match /TLS/
-  Nginx Environment
-     ✔  version should eq "1.10.3"
 ```
 
  - For more [nginx inspec audit](https://www.inspec.io/docs/reference/resources/nginx/)
