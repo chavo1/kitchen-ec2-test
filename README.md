@@ -1,17 +1,29 @@
 
-# This is kitchen test that will test an AMI with [nginx](https://www.nginx.com/) under Your AWS account.
-Please be aware the value of AMI image is hardcoded in "kitchen.yml" file and you should change it with your own.
+
+# This is kitchen test that will test an AMI with [nginx](https://www.nginx.com/) under [Your AWS account](https://aws.amazon.com/account/).
+
+
+## Here are some requirements before the test
+
+
+
+
+The value of [AMI image](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) and [Security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) are hardcoded in "kitchen.yml" file and you should change it with your own.
 ```
 # Old value
-image_id: ami-07647a0c080280f47
-
+security_group_ids: ["sg-0afa16b5b0d3ace0e"]
 # New value
-image_id: <your AMI>
+security_group_ids: ["Your security group here"]
+
+# Old value
+image_id: ami-07647a0c080280f47
+# New value
+image_id: <your AMI here>
 
 ```
 If you have AMI with [nginx](https://www.nginx.com/) you can continue with prerequisite if no [HERE](https://github.com/chavo1/ami-nginx) in other repo is an explanation how to build you own.
 
-##Prerequisite:
+
 
 Be sure you have [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). 
 In the example in "kitchen.yml" file under driver section:
