@@ -41,10 +41,10 @@ https://github.com/chavo1/kitchen-ec2-test/archive/master.zip
 ```
 https://github.com/chavo1/kitchen-ec2-test.git
 ```
-3. Install and init kitchen-ec2 driver with following:
+3. Install needed gems with following:
 ```
-kitchen init --driver=kitchen-ec2 --create-gemfile
-bundle install
+gem install kitchen-inspec
+gem install kitchen-ec2
 ```
 4. Than you can test it with following commands:
 
