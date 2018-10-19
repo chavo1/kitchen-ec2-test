@@ -10,6 +10,3 @@ end
 describe nginx do
   its('support_info') { should match /TLS/ }
 end
-describe nginx do
-  its('version') { should eq '1.10.3' }
-end
