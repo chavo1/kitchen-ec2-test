@@ -1,5 +1,5 @@
 
-# This is kitchen test that will test an AMI under Your AWS account.
+# This is kitchen test that will test an AMI with [nginx](https://www.nginx.com/) under Your AWS account.
 If you have AMI with [nginx](https://www.nginx.com/) you can continue with prerequisite if no [here](https://github.com/chavo1/ami-nginx) in other repo is an explanation how to build you own.
 
 ##Prerequisite:
