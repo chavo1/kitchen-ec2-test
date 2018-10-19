@@ -5,8 +5,11 @@
 
 ## Here are some requirements before the test
 
-
-
+[Export your AWS](https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html) "Access" and "Secret" keys as follow:
+```
+export AWS_ACCESS_KEY_ID=<MYACCESSKEYID>
+export AWS_SECRET_ACCESS_KEY=<MYSECRETACCESSKEY>
+```
 
 The value of [AMI image](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) and [Security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) are hardcoded in "kitchen.yml" file and you should change it with your own.
 ```
