@@ -1,6 +1,6 @@
 
 
-# This is kitchen test that will test an AMI with [nginx](https://www.nginx.com/) under [Your AWS account](https://aws.amazon.com/account/).
+# This is [kitchen test](https://docs.aws.amazon.com/opsworks/latest/userguide/cookbooks-101-basics-ec2.html) that will test an AMI with [nginx](https://www.nginx.com/) under [Your AWS account](https://aws.amazon.com/account/).
 
 
 ## Here are some requirements before the test
