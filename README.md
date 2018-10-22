@@ -13,7 +13,7 @@ export AWS_ACCESS_KEY_ID=<MYACCESSKEYID>
 export AWS_SECRET_ACCESS_KEY=<MYSECRETACCESSKEY>
 ```
 
-The value of [AMI image](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) and [Security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) are hardcoded in "kitchen.yml" file and you should change it with your own.
+The value of AMI image and Security group are hardcoded in "kitchen.yml" file and you should change it with your own.
 ```
 # Old value
 security_group_ids: ["sg-0afa16b5b0d3ace0e"]
