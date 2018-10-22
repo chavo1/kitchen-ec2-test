@@ -1,4 +1,4 @@
-# Prerequisite:
+# Pr
 
 Be sure you have installed "rbenv", if not follow below:
 ```
