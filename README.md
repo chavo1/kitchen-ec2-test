@@ -1,6 +1,8 @@
 
 
-# This is kitchen test that will test an AMI with nginx under Your AWS account.
+# This is a kitchen-ec2 test.
+
+It will test existing AWS AMI under your account whether there is installed nginx.
 
 
 ## Here are some requirements before the test
