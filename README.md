@@ -2,7 +2,7 @@
 
 # This is a kitchen-ec2 test.
 
-It will test existing AWS AMI under your account whether there is installed ngi.
+It will test existing AWS AMI under your account whether there is installed .
 
 
 ## Here are some requirements before the test
