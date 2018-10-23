@@ -8,7 +8,7 @@ export AWS_ACCESS_KEY_ID=<MYACCESSKEYID>
 export AWS_SECRET_ACCESS_KEY=<MYSECRETACCESSKEY>
 ```
 
-The values of <u>AMI image</u> and <u>Security group</u> are hardcoded in "kitchen.yml" file and you should change it with your own.
+The values of <u>**AMI image**</u> and <u>**Security group**</u> are hardcoded in "kitchen.yml" file and you should change it with your own.
 
 - For the test is needed an [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html), which are imported to or genarated in [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Under the transport section is a private part of this pair which is located on your machine:
 
