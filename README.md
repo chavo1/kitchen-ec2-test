@@ -10,14 +10,11 @@ export AWS_SECRET_ACCESS_KEY=<MYSECRETACCESSKEY>
 
 The values of <u>__AMI image__</u> and <u>__Security group__</u> are hardcoded in "kitchen.yml" file and you should change it with your own.
 
-- For the test is needed an [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). 
-
+- For the test is needed an [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html), which are imported to or genarated in [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Under the transport section is a private part of this pair which is located on your machine:
 
 ```
 aws_ssh_key_id: id_rsa
-```
-Is a key which is imported to or genarated in [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Under the transport section is a private part of this pair which is located on your machine:
-```
+
 ssh_key: "~/.ssh/id_rsa"
 ```
 Be sure you have installed "rbenv", if not follow below:
