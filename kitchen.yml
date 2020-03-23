@@ -1,22 +1,29 @@
 ---
-driver:
-  name: ec2
-  aws_ssh_key_id: id_rsa
-  security_group_ids: ["sg-0afa16b5b0d3ace0e"]
-  region: us-east-1
-  instance_type: t2.micro
-  associate_public_ip: true
-
-platforms:
-  - name: ubuntu-14.04
-    driver:
-      image_id: ami-07647a0c080280f47
-transport:
-    ssh_key: "~/.ssh/id_rsa"
-    username: ubuntu
-
-verifier:
-  name: inspec
-
-suites:
-  - name: default
+  driver:
+    name: terraform
+    variable_files:
+      - testing.tfvars
+  
+  provisioner:
+    name: terraform
+  
+  platforms:
+    - name: ubuntu
+  
+  verifier:
+    name: terraform
+    systems:
+      - name: default
+        controls:
+          - operating_system
+        backend: ssh
+        user: ubuntu
+        key_files:
+          - "~/.ssh/id_rsa"
+        hosts_output: public_dns
+        reporter:
+          - documentation
+  
+  suites:
+    - name: default
+            
