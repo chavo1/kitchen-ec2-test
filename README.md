@@ -1,28 +1,18 @@
-# This repo contain a project that test AWS AMI for installed nginx
+# This repo contain Terraform code to spin up an Amazon Web Services (AWS) EC2 instance using Inspec and Kitchen-Terraform
+
+### Following [this](https://newcontext-oss.github.io/kitchen-terraform/tutorials/amazon_provider_ec2.html) article
 
 ## Requirements
-
-[Export your AWS](https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html) "Access" and "Secret" keys as follow:
-```
-export AWS_ACCESS_KEY_ID=<MYACCESSKEYID>
-export AWS_SECRET_ACCESS_KEY=<MYSECRETACCESSKEY>
-```
-
-The values of <u>**AMI image**</u> and <u>**Security group**</u> are hardcoded in "kitchen.yml" file and you should change it with your own.
-
-- For the test is needed an [AWS key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html), which are imported to or genarated in [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Under the transport section is a private part of this pair which is located on your machine:
-
-```
-aws_ssh_key_id: id_rsa
-
-ssh_key: "~/.ssh/id_rsa"
-```
-Be sure you have installed "rbenv", if not follow below:
+- [Terraform](https://www.terraform.io/) should be installed
+- An AWS Account
+- [Bundler](https://bundler.io/) should be installed
+- The default security group on your account must allow SSH access from your IP address.
+- Be sure you have installed "rbenv", if not - just install it:
 ```
 brew install rbenv
-rbenv install 2.3.1
-rbenv local 2.3.1
-rbenv versions //to check if version is 2.3.1
+rbenv install 2.6.5
+rbenv local 2.6.5
+rbenv versions //to check if version is 2.6.5
 ```
 add the following to your ~/.bash_profile:
 
@@ -44,20 +34,20 @@ git clone https://github.com/chavo1/kitchen-ec2-test.git
 ```
 2. Install needed gems with following:
 ```
-gem install kitchen-inspec
-gem install kitchen-ec2
+bundle install
 ```
 3. Than you can test it with following commands:
 
 ```
-kitchen list
-kitchen converge
-kitchen verify
+bundle exec kitchen converge
+bundle exec kitchen verify
 ```
-
- - For more [nginx inspec audit](https://www.inspec.io/docs/reference/resources/nginx/)
-
+- Here is the output:
+```
+Finished in 0.00143 seconds (files took 10.48 seconds to load)
+0 examples, 0 failures
+```
 4. Destroy the EC2 instance:
 ```
-kitchen destroy
+bundle exec kitchen destroy
 ```
