@@ -44,8 +44,12 @@ bundle exec kitchen verify
 ```
 - Here is the output:
 ```
-Finished in 0.00143 seconds (files took 10.48 seconds to load)
-0 examples, 0 failures
+Command: `lsb_release -a`
+  stdout
+    is expected to match /Ubuntu/
+
+Finished in 0.5807 seconds (files took 9.12 seconds to load)
+1 example, 0 failures
 ```
 4. Destroy the EC2 instance:
 ```
